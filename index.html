@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>R. C. Patel Institute of Technology</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="corner corner-top"></div>
+
+  <header class="navbar">
+    <div class="brand">
+      <div class="logo-mark"><span>SES</span><small>EST. 1982</small></div>
+      <div class="brand-text">
+        <strong>R. C. PATEL</strong>
+        <b>INSTITUTE OF TECHNOLOGY</b>
+        <em>An Autonomous Institute</em>
+      </div>
+    </div>
+    <nav>
+      <a class="active" href="#home">Home</a>
+      <a href="#college">College Info</a>
+      <a href="#departments">Departments</a>
+      <a href="#admission">Admission</a>
+      <a href="#fees">Fees</a>
+      <a href="#hostel">Hostel</a>
+      <a href="#placement">Placement</a>
+      <a href="#facilities">Facilities</a>
+      <a href="#navigation">Navigation</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="chat-top" onclick="openChat()"><span>🤖</span> Chat with Us</button>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="script">Welcome to <span>‹</span></div>
+        <h1>R. C. Patel Institute of Technology</h1>
+        <h2>Your College Information, Just a <span>Chat Away!</span></h2>
+        <p>Get instant answers to your queries about academics, admission,<br>
+        fees, hostel, placements, facilities and more — with our <b>AI powered<br>
+        College Query Chatbot.</b></p>
+        <button class="primary" onclick="openChat()">💬 &nbsp; Start Chatting <b>→</b></button>
+      </div>
+
+      <div class="campus-wrap">
+        <img src="assets/campus.jpg" alt="RCPIT campus">
+        <div class="fade"></div>
+      </div>
+
+      <div class="bot-speech">Hi! I'm <b>RCPIT Bot</b> 👋<br>How can I help you today?</div>
+      <div class="robot">
+        <div class="antenna"></div>
+        <div class="head"><div class="eyes">⌣　⌣</div><div class="visor">RCPIT</div></div>
+        <div class="body">RCPIT</div>
+        <div class="arm left">◜</div><div class="arm right">◝</div>
+      </div>
+    </section>
+
+    <section class="quick" id="college">
+      <div class="section-title">
+        <h2>Quick Access</h2>
+        <p>Explore the most important sections of our college.</p>
+      </div>
+      <div class="cards">
+        <article class="card blue" onclick="showInfo('College Information','Learn about our institute, vision, mission, accreditation and academic culture.')">
+          <div class="icon">🏫</div><h3>College Information</h3><p>Know about our institute,<br>vision, mission & more</p><span>→</span>
+        </article>
+        <article class="card pink" id="departments" onclick="showInfo('Departments','Explore engineering departments, programs and academic offerings.')">
+          <div class="icon">🎓</div><h3>Departments</h3><p>Explore all engineering<br>departments</p><span>→</span>
+        </article>
+        <article class="card green" id="admission" onclick="showInfo('Admission','Find eligibility, admission process, important dates and guidance.')">
+          <div class="icon">📄</div><h3>Admission</h3><p>Eligibility, process &<br>important dates</p><span>→</span>
+        </article>
+        <article class="card yellow" id="fees" onclick="showInfo('Fees','View fee structure and payment-related information.')">
+          <div class="icon">₹</div><h3>Fees</h3><p>Fee structure &<br>payment details</p><span>→</span>
+        </article>
+
+        <article class="card purple" id="hostel" onclick="showInfo('Hostel','Rooms, mess facilities, rules and hostel-related information.')">
+          <div class="icon">🏠</div><h3>Hostel</h3><p>Rooms, mess, facilities<br>& rules</p><span>→</span>
+        </article>
+        <article class="card cyan" id="placement" onclick="showInfo('Training & Placement','Internships, placement records, recruiters and career support.')">
+          <div class="icon">💼</div><h3>Training & Placement</h3><p>Internships, placement<br>records & career support</p><span>→</span>
+        </article>
+        <article class="card rose" id="facilities" onclick="showInfo('Facilities','Explore labs, library, sports, campus facilities and student resources.')">
+          <div class="icon">⚙</div><h3>Facilities</h3><p>Labs, library, sports<br>& more</p><span>→</span>
+        </article>
+        <article class="card sky" id="navigation" onclick="showInfo('Campus Navigation','Find your way around campus and locate key facilities.')">
+          <div class="icon">📍</div><h3>Campus Navigation</h3><p>Find your way around<br>our campus</p><span>→</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="why" id="contact">
+      <h2>Why RCPIT?</h2>
+      <div class="why-grid">
+        <div><strong>🏅</strong><span>NAAC ‘A’ Grade<br>Accredited</span></div>
+        <div><strong>🏛️</strong><span>Autonomous<br>Institute</span></div>
+        <div><strong>👥</strong><span>Experienced<br>Faculty</span></div>
+        <div><strong>⭐</strong><span>Excellent<br>Placements</span></div>
+        <div class="tagline">Learn<br>Grow<br>Achieve</div>
+      </div>
+    </section>
+  </main>
+
+  <button class="floating-chat" onclick="openChat()">🤖</button>
+
+  <div class="chat-panel" id="chatPanel">
+    <div class="chat-head">
+      <div>🤖 <b>RCPIT College Chatbot</b></div>
+      <button onclick="closeChat()">×</button>
+    </div>
+    <div class="chat-body" id="chatBody">
+      <div class="bot-msg">Hi 👋<br>I'm your <b>RCPIT College Query Chatbot.</b><br>Ask me anything about the college.</div>
+      <div class="chips">
+        <button onclick="ask('College Information')">🏫 College Information</button>
+        <button onclick="ask('Departments')">🎓 Departments</button>
+        <button onclick="ask('Admission')">Admission</button>
+        <button onclick="ask('Fees')">₹ Fees</button>
+        <button onclick="ask('Hostel')">🏠 Hostel</button>
+        <button onclick="ask('Placement')">💼 Placement</button>
+        <button onclick="ask('Facilities')">⚙ Facilities</button>
+      </div>
+    </div>
+    <form class="chat-input" onsubmit="sendMessage(event)">
+      <input id="question" placeholder="Type your question..." autocomplete="off">
+      <button>➤</button>
+    </form>
+  </div>
+
+  <div class="modal" id="modal" onclick="closeModal(event)">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal()">×</button>
+      <h2 id="modalTitle"></h2><p id="modalText"></p>
+    </div>
+  </div>
+
+  <footer>© 2026 R. C. Patel Institute of Technology · College Information Portal</footer>
+  <script src="script.js"></script>
+</body>
+</html>
